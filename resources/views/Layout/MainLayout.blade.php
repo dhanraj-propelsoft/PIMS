@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./css/app.css">
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" style="overflow:hidden">
   <div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light divBorderStyle">
