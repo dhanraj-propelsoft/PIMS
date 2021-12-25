@@ -1,8 +1,8 @@
 @extends('Layout.MainLayout')
 @section('content')
-<div class="container">
+<div class="container" style="overflow: scroll;" > 
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="margin-top:7%;">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
@@ -71,6 +71,30 @@
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
                     </tr>
                     <tr>
                         <td>5</td>
