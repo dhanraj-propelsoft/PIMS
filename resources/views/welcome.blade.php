@@ -20,8 +20,8 @@
       <!-- /.content-header -->
 
       <!-- Main content -->
-      <div class="content" style="max-height: 600px!important;
-  overflow: auto;">
+      <div class="content" style="max-height: 600px!important; overflow: scroll
+  ">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-6">
@@ -36,6 +36,19 @@
 
                   <a href="#" class="card-link">Card link</a>
                   <a href="#" class="card-link">Another link1</a>
+                </div>
+              </div>
+
+              <div class="card card-primary card-outline">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link2</a>
                 </div>
               </div>
 
@@ -136,6 +149,7 @@
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
+              
             </div>
             <!-- /.col-md-6 -->
           </div>
