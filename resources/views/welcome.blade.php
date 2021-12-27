@@ -1,7 +1,7 @@
 @extends('Layout.MainLayout')
 
 @section('content')
-
+<!-- //text By dhana -->
       <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
@@ -20,7 +20,7 @@
       <!-- /.content-header -->
 
       <!-- Main content -->
-      <div class="content" style="max-height: 600px!important; overflow-y: scroll;
+      <div class="content" style="max-height: 600px!important; overflow-x: hidden; overflow-y:scroll;
   ">
         <div class="container-fluid">
           <div class="row">

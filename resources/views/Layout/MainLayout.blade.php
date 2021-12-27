@@ -31,7 +31,7 @@ function myFunction() {
 </script>
 </head>
 
-<body class="hold-transition sidebar-mini" style="overflow-y: hidden;">
+<body class="hold-transition sidebar-mini" style="overflow-x:hidden;overflow-y:scroll">
   <div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light divBorderStyle">
@@ -93,7 +93,6 @@ function myFunction() {
                 </p>
               </a>
             </li>
-
             <!-- <li class="nav-item has-treeview">
               <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -124,7 +123,7 @@ function myFunction() {
       </div>
       <!-- /.sidebar -->
     </aside>
-      
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper divBorderStyle"  >
     @yield('content')
