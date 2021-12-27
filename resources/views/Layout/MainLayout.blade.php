@@ -15,6 +15,20 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="./css/app.css">
+  <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("main-header");
+var sticky = main-header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </head>
 
 <body class="hold-transition sidebar-mini" style="overflow-x:hidden;overflow-y:scroll">
