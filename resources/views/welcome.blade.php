@@ -20,7 +20,7 @@
       <!-- /.content-header -->
 
       <!-- Main content -->
-      <div class="content" style="max-height: 600px!important; overflow: scroll
+      <div class="content" style="max-height: 600px!important; overflow-x: hidden; overflow-y:scroll;
   ">
         <div class="container-fluid">
           <div class="row">
