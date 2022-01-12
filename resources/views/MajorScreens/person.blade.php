@@ -1,5 +1,31 @@
 @extends('Layout.MainLayout')
 @section('content')
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn,i')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+
+
+
+
+
 
 <div class="content-header">
   <div class="container-fluid">
@@ -12,6 +38,16 @@
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">{{$module}}</a></li>
           <li class="breadcrumb-item active">{{ $pagePath }}</li>
+          <li>
+            <div class=" dropdown">
+              <button onclick="myFunction()" class="dropbtn"> <i class="fa fa-ellipsis-v "></i>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+            </div>
+          </li>
         </ol>
       </div><!-- /.col -->
     </div>
@@ -28,51 +64,27 @@
       <thead>
         <tr>
 
-          <th>#</th>
+          <th>Name</th>
 
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Middle Name</th>
+          <th>Alias</th>
+          <th>Life Status</th>
+          <th>Depone Status</th>
+          <th>User Status</th>
+          <th>Last Login</th>
+          <th>Action Status</th>
 
         </tr>
       </thead>
       <tbody class="section">
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
 
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
 
-        </tr>
         <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
+          <td>Dhana Raj</td>
+          <td>Dhana</td>
+          <td>Live</td>
+          <td>Self</td>
+          <td>Yes</td>
+          <td>Today 10pm</td>
           <td>
             <a type="button" class="btn">
               <i class="material-icons text-warning">edit</i>
@@ -81,440 +93,11 @@
               <i class="material-icons text-danger">delete</i>
             </a>
           </td>
+        </tr>
 
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Clark</td>
-          <td>Kent</td>
-          <td>clarkkent</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter</td>
-          <td>Parker</td>
-          <td>peterparker</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John</td>
-          <td>Carter</td>
-          <td>johncarter</td>
-          <td>
-            <a type="button" class="btn">
-              <i class="material-icons text-warning">edit</i>
-            </a>
-            <a type="button" class="btn">
-              <i class="material-icons text-danger">delete</i>
-            </a>
-          </td>
-
-        </tr>
       </tbody>
     </table>
-    <!-- <table>
-      <thead>
-        <th>Invoice Number</th>
-        <th>Purchaser</th>
-        <th>Invoice Amount</th>
-        <th>Invoice Date</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-        <tr>
-          <td>INV-1233</td>
-          <td>Dinesh Vaitage</td>
-          <td>$300</td>
-          <td>01/12/2017</td>
-        </tr>
-      </tbody>
-    </table> -->
+
   </div>
 
 
@@ -523,7 +106,7 @@
 
 <script>
   $(document).ready(function() {
-    
+
     $("#search-table").on("keyup", function() { //here #input textbox id 
       var value = $(this).val().toLowerCase();
       console.log(value);
