@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+     return view('Auth.login');
+    //return view('auth.login');
 });
- Route::Resource('person', 'App\Http\Controllers\Api\PersonController');
+
+Route::get('welcome', function () {
+    return view('welcome');
+   //return view('auth.login');
+});
+Route::Resource('person', 'App\Http\Controllers\Api\Controller\PersonController');
+
+ Route::get('people', 'App\Http\Controllers\Api\Controller\PersonController@getPeople');

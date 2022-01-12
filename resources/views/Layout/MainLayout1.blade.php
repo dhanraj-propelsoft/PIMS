@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
   <title>Propel</title>
-
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-
   <link rel="stylesheet" href="/css/app.css">
   <!-- <link rel="stylesheet" href="/css/tableStyle.css"> -->
-
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js"></script>
 </head>
-
-<body class="hold-transition sidebar-mini" style="overflow-x:hidden;overflow-y:hidden;
-border: solid #8000ff 5px;
-  border-width:5px;margin-top:1px">
+<body class="hold-transition sidebar-mini" style="overflow-x:hidden;overflow-y:hidden;">
   <div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light TopHeaderDivBorderStyle">
@@ -34,24 +26,16 @@ border: solid #8000ff 5px;
               </li>
             </ul>
           </div>
-
         </div>
-        <!-- <div class="row" style="
+        <div class="row" style="
   border-radius: 10px;margin-right:-25px">
-          <div class="col"><a href="#aboutModal" data-toggle="modal" data-target="#myModal">
-              <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_79132228c6be3035465c3295071a5c62/propel-propel.png" style="height:80%;width:130px;z-index:20;">
-            </a>
-          </div>
-        </div> -->
+          
+        </div>
       </div>
-
-
     </nav>
     <!-- /.navbar -->
-
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary  divBorderStyle position-fixed">
-
       <!-- Sidebar -->
       <div class="sidebar">
         <label class="dropdown">
@@ -96,7 +80,6 @@ border: solid #8000ff 5px;
                with font-awesome or any other icon font library -->
             <li class="nav-item">
               <a href="{{ url('api/person') }}" class="nav-link">
-
                 <i class="nav-icon fa fa-users"></i>
                 <p>
                   Person
@@ -106,7 +89,6 @@ border: solid #8000ff 5px;
             </li>
             <li class="nav-item">
               <a href="{{ url('people') }}" class="nav-link">
-
                 <i class="nav-icon fa fa-user"></i>
                 <p>
                   People
@@ -137,48 +119,36 @@ border: solid #8000ff 5px;
                 </li>
               </ul>
             </li> -->
-
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
     </aside>
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper MainContentDivBorderStyle">
       @yield('content')
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
-
-
   </div>
   <!-- ./wrapper -->
-
   <!-- REQUIRED SCRIPTS -->
-
   <!-- jQuery -->
   <script src="./js/app.js"></script>
   <script src="js/ListTable.js"></script>
   <script>
     $(document).ready(function() {
-
-
     });
     $(".dropdown-menu li a").click(function() {
       console.log("well dhsd");
       $(".btn:first-child").text($(this).text());
       $(".btn:first-child").val($(this).text());
-
     });
   </script>
   <!-- #region datatables files -->
   <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
   <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
   <!-- #endregion -->
-
 </body>
-
 </html>

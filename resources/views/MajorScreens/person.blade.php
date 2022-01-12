@@ -1,156 +1,538 @@
 @extends('Layout.MainLayout')
 @section('content')
-<div class="container" style="overflow: scroll;" > 
 
-    <div class="row justify-content-center" style="margin-top:7%;">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="content-header">
+  <div class="container-fluid">
 
-                <div class="card-body">
-                    <!-- @if (session('status')) -->
-                        <div class="alert alert-success" role="alert">
-                           Dhana Raj Good Success Man
-                        </div>
-                    <!-- @endif -->
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+    <div class="row mb-2 MajorScreenHeaderstyle">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">{{ $pageName }}</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">{{$module}}</a></li>
+          <li class="breadcrumb-item active">{{ $pagePath }}</li>
+        </ol>
+      </div><!-- /.col -->
     </div>
-    <!--  Table -->
-    <div class="container" style="border: 2px solid green;border-radius:1%;">
-    <!-- <h3>The columns titles are merged with the filters inputs thanks to the placeholders attributes</h3> -->
-    <hr>
-    <!-- <p>Inspired by this <a href="http://bootsnipp.com/snippets/featured/panel-tables-with-filter">snippet</a></p> -->
-    <!-- <div class="row"> -->
-        <div class="panel panel-primary filterable">
-            <div class="panel-heading">
-                <h3 class="panel-title">Users</h3>
-                <div class="pull-right">
-                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
-                </div>
-            </div>
-            <table class="table">
-                <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="#" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="First Name" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Last Name" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Username" disabled></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Vignesh</td>
-                        <td>Vicky</td>
-                        <td>@vky</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Praveen</td>
-                        <td>Prav</td>
-                        <td>@pr</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Vijay</td>
-                        <td>Viji</td>
-                        <td>@vijjee</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    <!-- </div> -->
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
 </div>
 
+<div class="content MajorScreenbodystyle">
+  <div class="">
+    <div style="float: right; margin-top:-12px"> <input type="text" id="search-table" placeholder="Search..." /></div>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+
+          <th>#</th>
+
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Middle Name</th>
+
+        </tr>
+      </thead>
+      <tbody class="section">
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Clark</td>
+          <td>Kent</td>
+          <td>clarkkent</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>peterparker</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John</td>
+          <td>Carter</td>
+          <td>johncarter</td>
+          <td>
+            <a type="button" class="btn">
+              <i class="material-icons text-warning">edit</i>
+            </a>
+            <a type="button" class="btn">
+              <i class="material-icons text-danger">delete</i>
+            </a>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+    <!-- <table>
+      <thead>
+        <th>Invoice Number</th>
+        <th>Purchaser</th>
+        <th>Invoice Amount</th>
+        <th>Invoice Date</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+        <tr>
+          <td>INV-1233</td>
+          <td>Dinesh Vaitage</td>
+          <td>$300</td>
+          <td>01/12/2017</td>
+        </tr>
+      </tbody>
+    </table> -->
+  </div>
+
+
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
 <script>
-    $(document).ready(function(){
-    $('.filterable .btn-filter').click(function(){
-        var $panel = $(this).parents('.filterable'),
-        $filters = $panel.find('.filters input'),
-        $tbody = $panel.find('.table tbody');
-        if ($filters.prop('disabled') == true) {
-            $filters.prop('disabled', false);
-            $filters.first().focus();
-        } else {
-            $filters.val('').prop('disabled', true);
-            $tbody.find('.no-result').remove();
-            $tbody.find('tr').show();
-        }
+  $(document).ready(function() {
+    
+    $("#search-table").on("keyup", function() { //here #input textbox id 
+      var value = $(this).val().toLowerCase();
+      console.log(value);
+      $(".table tbody tr").filter(function() { //here #table table body id 
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
     });
 
-    $('.filterable .filters input').keyup(function(e){
-        /* Ignore tab key */
-        var code = e.keyCode || e.which;
-        if (code == '9') return;
-        /* Useful DOM data and selectors */
-        var $input = $(this),
-        inputContent = $input.val().toLowerCase(),
-        $panel = $input.parents('.filterable'),
-        column = $panel.find('.filters th').index($input.parents('th')),
-        $table = $panel.find('.table'),
-        $rows = $table.find('tbody tr');
-        /* Dirtiest filter function ever ;) */
-        var $filteredRows = $rows.filter(function(){
-            var value = $(this).find('td').eq(column).text().toLowerCase();
-            return value.indexOf(inputContent) === -1;
-        });
-        /* Clean previous no-result if exist */
-        $table.find('tbody .no-result').remove();
-        /* Show all rows, hide filtered ones (never do that outside of a demo ! xD) */
-        $rows.show();
-        $filteredRows.hide();
-        /* Prepend no-result row if all rows are filtered */
-        if ($filteredRows.length === $rows.length) {
-            $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="'+ $table.find('.filters th').length +'">No result found</td></tr>'));
-        }
-    });
-});
+  });
 </script>
 </div>
 
