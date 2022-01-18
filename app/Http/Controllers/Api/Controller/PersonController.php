@@ -10,8 +10,7 @@ class PersonController extends Controller
     public function index()
     {
         $models = Person::get();
-        
-        $pageName = "Person";
+        testing        $pageName = "Person";
         $module = "PIMS";
         $pagePath = "Person";
         //dd($models);
